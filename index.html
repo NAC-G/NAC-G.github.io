@@ -1,293 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ontario Compliance Operating System™ | Natural Alternatives</title>
-<meta name="description" content="Elite Ontario-aligned compliance operating system for employers. Generate, implement, track, and maintain inspection-ready documentation." />
-
-<script>
-  /* SINGLE SOURCE OF TRUTH (fixes broken/mismatched links) */
-  const COMPLIANCE_URL = "https://www.naturalalternatives.ca/ontario-compliance-operating-system-/";
-</script>
-
-<style>
-:root{
-  --bg:#0b0b0c;
-  --bg2:#0f0f12;
-  --surface: rgba(255,255,255,.03);
-  --border:#2a2a33;
-  --text:#f2f2f2;
-  --muted:#b9b9c2;
-  --muted2:#9a9aa3;
-  --green:#7ac143;
-  --shadow: 0 18px 40px rgba(0,0,0,.55);
-  --shadowSoft: 0 12px 26px rgba(0,0,0,.40);
-  --radius: 18px;
-  --max: 1120px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background:
-    radial-gradient(1200px 520px at 25% -10%, rgba(255,255,255,.10) 0%, transparent 60%),
-    radial-gradient(900px 460px at 85% 0%, rgba(255,255,255,.07) 0%, transparent 60%),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
-  color:var(--text);
-  line-height:1.55;
-}
-a{text-decoration:none;color:inherit}
-
-.wrap{max-width:var(--max);margin:auto;padding:20px 28px 140px;}
-
-header{
-  position:sticky;
-  top:14px;
-  z-index:999;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  padding:18px 22px;
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:16px;
-  background:rgba(18,18,23,.6);
-  backdrop-filter:blur(12px);
-  box-shadow:var(--shadowSoft);
-}
-.brand strong{font-size:14px;letter-spacing:.4px}
-.brand span{font-size:12px;color:var(--muted2)}
-
-nav{display:flex;gap:12px;flex-wrap:wrap}
-nav a{
-  padding:8px 12px;
-  border-radius:12px;
-  font-size:14px;
-  color:var(--muted);
-}
-nav a:hover{background:rgba(255,255,255,.06);color:#fff}
-nav a.primary{
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.14);
-  font-weight:800;
-  color:#fff;
-}
-
-main{margin-top:50px}
-.hero h1{
-  font-size: clamp(34px,5vw,60px);
-  line-height:1.06;
-  margin:0;
-}
-.hero p{
-  font-size:18px;
-  color:var(--muted);
-  max-width:950px;
-}
-.accent{
-  width:170px;
-  height:8px;
-  background:var(--green);
-  border-radius:999px;
-  margin-top:12px;
-}
-
-.btn{
-  display:inline-block;
-  padding:14px 20px;
-  border-radius:14px;
-  font-weight:900;
-  border:1px solid rgba(255,255,255,.16);
-  background:rgba(255,255,255,.08);
-  margin-top:18px;
-}
-.btn:hover{background:rgba(255,255,255,.14)}
-.btn.primary{
-  box-shadow:0 0 0 1px rgba(122,193,67,.35) inset;
-}
-
-section{
-  padding:50px 0;
-  border-top:1px solid var(--border);
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:18px;
-}
-.card{
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:20px;
-  box-shadow:var(--shadowSoft);
-}
-.card h3{margin:0 0 8px}
-.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
-
-footer{
-  border-top:1px solid var(--border);
-  padding:30px 0;
-  margin-top:40px;
-  font-size:13px;
-  color:var(--muted2);
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:12px;
-}
-footer a{border-bottom:1px solid rgba(255,255,255,.15)}
-footer a:hover{color:var(--green)}
-
-.floating{
-  position:fixed;
-  bottom:15px;
-  left:50%;
-  transform:translateX(-50%);
-  background:rgba(18,18,23,.8);
-  backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:16px;
-  padding:10px 16px;
-  display:flex;
-  gap:12px;
-  box-shadow:var(--shadow);
-  z-index:1000;
-}
-@media (max-width:720px){
-  .wrap{padding:18px 18px 160px;}
-  .floating{width:calc(100% - 20px);justify-content:space-between;}
-}
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natural Alternatives — Compliance, Software, Landscape &amp; Firewood</title>
+<meta name="description" content="Natural Alternatives runs four operational divisions from Cornwall, Ontario — compliance systems, contractor software, landscape services, and firewood supply — on one shared documentation standard.">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<div class="wrap">
 
-<header>
-  <div class="brand">
-    <strong>Natural Alternatives</strong><br>
-    <span>Ontario Compliance Division</span>
+<!-- ============================================================
+     ICON SPRITE
+     ============================================================ -->
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="n-check" viewBox="0 0 24 24"><path d="M4 12l6 6L20 6"/></symbol>
+    <symbol id="n-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="n-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></symbol>
+    <symbol id="n-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+
+    <symbol id="n-job" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5a1 1 0 011-1h6a1 1 0 011 1v2"/><path d="M3 12h18"/></symbol>
+    <symbol id="n-doc" viewBox="0 0 24 24"><path d="M6 3h8l5 5v13a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></symbol>
+
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.6-3 7.9-7 9-4-1.1-7-4.4-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></symbol>
+    <symbol id="i-stump" viewBox="0 0 24 24"><ellipse cx="12" cy="8.5" rx="7" ry="3"/><circle cx="12" cy="8.5" r="3.3"/><path d="M5 8.5v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 2c2 3-3 5-1 9 1-2 3-2 3-4 2 2 3 5 3 7a6 6 0 01-12 0c0-3 2-5 3-7 0 2 1 3 2 3-1-3 1-6 2-8z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="nav">
+  <div class="container nav-row">
+    <a href="#top" class="brand">
+      <span class="brand-mark"></span>
+      <span class="brand-word"><b>Natural Alternatives</b><span>Cornwall, Ontario</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#compliance">Compliance</a>
+      <a href="#software">Software</a>
+      <a href="#landscape">Landscape</a>
+      <a href="#firewood">Firewood</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><use href="#n-grid"/></svg>
+      </button>
+      <a class="btn btn-primary" href="mailto:info@naturalalternatives.ca">Get in Touch</a>
+    </div>
   </div>
-
-  <nav>
-    <a href="#overview">Overview</a>
-    <a href="#what">What You Get</a>
-    <a href="#who">Who It’s For</a>
-
-    <!-- ✅ Working Compliance Link (absolute HTTPS + trailing slash via COMPLIANCE_URL) -->
-    <a class="primary" href="#" id="navCompliance">Go to Compliance Page</a>
-  </nav>
 </header>
 
-<main>
-  <div class="hero" id="overview">
-    <h1>Ontario Compliance Operating System™</h1>
-    <p>
-      A premium, Ontario-aligned documentation system designed for employers who want inspection-ready structure without rebuilding from scratch.
-      Built to support consistent SOPs, training proof, logs, and governance across real operations.
-    </p>
-    <div class="accent"></div>
+<main id="top">
 
-    <!-- ✅ Working Compliance CTA -->
-    <a class="btn primary" href="#" id="heroCompliance">Open the Compliance Page</a>
-    <br/>
-    <a class="btn" href="#" id="heroCompliancePricing">Jump to Pricing on Compliance Page</a>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Eastern Ontario &middot; Operations Group</span>
+      <h1>Four divisions. One operational standard.</h1>
+      <p class="lede">Natural Alternatives runs compliance systems, contractor software, landscape services, and firewood supply from Cornwall, Ontario &mdash; all built on the same inspection&#8209;ready documentation standard.</p>
+      <div class="hero-ctas">
+        <a href="#divisions" class="btn btn-primary">Explore Divisions <svg class="icon btn-arrow" style="width:14px;height:14px;"><use href="#n-arrow"/></svg></a>
+        <a href="https://www.naturalalternatives.ca/ontario-compliance-operating-system-/" class="btn btn-outline" target="_blank" rel="noopener">Ontario Compliance System &#8599;</a>
+      </div>
+      <div class="hero-meta">
+        <div><b>04</b>Operating divisions</div>
+        <div><b>Cornwall, ON</b>Based &amp; operating</div>
+        <div><b>1&nbsp;Standard</b>Shared across every division</div>
+      </div>
+    </div>
+
+    <div class="status-card" aria-hidden="true">
+      <div class="status-bar">
+        <span class="status-dot"></span><span class="status-dot"></span><span class="status-dot"></span>
+        <span class="status-title">Divisions &middot; Status</span>
+      </div>
+      <div class="status-body">
+        <div class="status-row"><span class="status-row-label"><svg><use href="#i-shield"/></svg>Compliance</span><span class="chip chip-ok">Operating</span></div>
+        <div class="status-row"><span class="status-row-label"><svg><use href="#i-cpu"/></svg>Software</span><span class="chip chip-ok">Operating</span></div>
+        <div class="status-row"><span class="status-row-label"><svg><use href="#i-stump"/></svg>Landscape</span><span class="chip chip-ok">Seasonal</span></div>
+        <div class="status-row"><span class="status-row-label"><svg><use href="#i-flame"/></svg>Firewood</span><span class="chip chip-ok">Seasonal</span></div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <section id="what">
-    <h2 style="margin:0 0 14px;">What You Get</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Inspection-Ready Structure</h3>
-        <p>Clear organization designed to reduce scrambling during inspections by keeping policies, SOPs, and records aligned.</p>
+<!-- ============================================================
+     DIVISIONS
+     ============================================================ -->
+<section class="pad band-sunken" id="divisions">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Our Divisions</span>
+      <h2>Four Trades, One Back Office</h2>
+      <p>Every division runs on the same compliance and documentation backbone &mdash; click through to any one of them.</p>
+    </div>
+    <div class="brand-grid brand-grid-4">
+      <a class="brand-card brand-card-link" id="compliance" href="https://www.naturalalternatives.ca/ontario-compliance-operating-system-/" target="_blank" rel="noopener">
+        <span class="icon-wrap"><svg class="icon"><use href="#i-shield"/></svg></span>
+        <span class="status-pill status-pill-live">Division 01</span>
+        <h4>Compliance <svg class="card-arrow" viewBox="0 0 24 24"><use href="#n-arrow"/></svg></h4>
+        <p>The Ontario Compliance Operating System&trade; (OCOS) &mdash; inspection&#8209;ready documentation, built on OHSA.</p>
+      </a>
+      <a class="brand-card brand-card-link" id="software" href="https://naturalalternatives.ca" target="_blank" rel="noopener">
+        <span class="icon-wrap"><svg class="icon"><use href="#i-cpu"/></svg></span>
+        <span class="status-pill status-pill-live">Division 02</span>
+        <h4>Software <svg class="card-arrow" viewBox="0 0 24 24"><use href="#n-arrow"/></svg></h4>
+        <p>NAC OS &mdash; the operating layer for Ontario contractors. Compliance, finance, fleet, and training in one console.</p>
+      </a>
+      <a class="brand-card brand-card-link" id="landscape" href="https://landscape.naturalalternatives.ca" target="_blank" rel="noopener">
+        <span class="icon-wrap"><svg class="icon"><use href="#i-stump"/></svg></span>
+        <span class="status-pill status-pill-live">Division 03</span>
+        <h4>Landscape <svg class="card-arrow" viewBox="0 0 24 24"><use href="#n-arrow"/></svg></h4>
+        <p>Grounds maintenance, land clearing &amp; stump removal, and vegetation management for Cornwall &amp; SDG counties.</p>
+      </a>
+      <a class="brand-card brand-card-link" id="firewood" href="https://firewood.naturalalternatives.ca" target="_blank" rel="noopener">
+        <span class="icon-wrap"><svg class="icon"><use href="#i-flame"/></svg></span>
+        <span class="status-pill status-pill-live">Division 04</span>
+        <h4>Firewood <svg class="card-arrow" viewBox="0 0 24 24"><use href="#n-arrow"/></svg></h4>
+        <p>Seasonal bundles of air&#8209;dried mixed hardwood &mdash; self&#8209;serve stand and local delivery.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHAT TIES IT TOGETHER
+     ============================================================ -->
+<section class="pad" id="standard">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">One Standard</span>
+      <h2>What Ties It Together</h2>
+      <p>Different trades, the same back office.</p>
+    </div>
+    <div class="card-grid card-grid-3">
+      <div class="info-card">
+        <span class="icon-wrap"><svg class="icon"><use href="#n-doc"/></svg></span>
+        <h4>Inspection&#8209;Ready Documentation</h4>
+        <p>Every division is built on the same documentation and sign&#8209;off standard, not ad&#8209;hoc paperwork.</p>
       </div>
-      <div class="card">
-        <h3>Prompt-Driven Documentation</h3>
-        <p>Generate draft materials faster, then tailor to your equipment, tasks, hazards, and crew operations.</p>
+      <div class="info-card">
+        <span class="icon-wrap"><svg class="icon"><use href="#n-job"/></svg></span>
+        <h4>Cornwall&#8209;Based Crews</h4>
+        <p>Operated locally in Cornwall and the SDG counties, not outsourced or subcontracted at arm&rsquo;s length.</p>
       </div>
-      <div class="card">
-        <h3>Tracking & Verification</h3>
-        <p>Support due diligence with logs, sign-offs, training records, and corrective action tracking frameworks.</p>
+      <div class="info-card">
+        <span class="icon-wrap"><svg class="icon"><use href="#n-check"/></svg></span>
+        <h4>One Shared Standard</h4>
+        <p>Compliance, software, landscape, and firewood all run on the same governance model.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div style="margin-top:18px;">
-      <a class="btn primary" href="#" id="midCompliance">View Full Compliance System</a>
-    </div>
-  </section>
-
-  <section id="who">
-    <h2 style="margin:0 0 14px;">Who It’s For</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Small to Mid Employers</h3>
-        <p>Operators who need a professional framework to build and maintain documentation without starting from zero.</p>
-      </div>
-      <div class="card">
-        <h3>Multi-Crew Operations</h3>
-        <p>Organizations that need consistent governance, standardized SOPs, and repeatable training proof across crews.</p>
-      </div>
-      <div class="card">
-        <h3>Audit & Due Diligence Mindset</h3>
-        <p>Teams focused on record quality, update cycles, responsibility assignment, and proof of implementation over time.</p>
-      </div>
-    </div>
-
-    <div style="margin-top:18px;">
-      <a class="btn" href="#" id="bottomCompliance">Go to Compliance Page</a>
-    </div>
-  </section>
-
-  <footer>
-    <div>© <span id="y"></span> Natural Alternatives</div>
-    <div>
-      <a href="#" id="footerCompliance">Ontario Compliance Operating System™</a>
-    </div>
-  </footer>
 </main>
-</div>
 
-<!-- Floating CTA (always works) -->
-<div class="floating" role="region" aria-label="Quick access">
-  <a class="btn primary" href="#" id="floatCompliance">Compliance Page</a>
-  <a class="btn" href="#" id="floatPricing">Compliance Pricing</a>
-</div>
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-word"><b>Natural Alternatives</b><span>Eastern Ontario Operations Group</span></span>
+      <p>Cornwall, Ontario<br>Compliance &middot; Software &middot; Landscape &middot; Firewood.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Divisions</h5>
+      <ul>
+        <li><a href="https://www.naturalalternatives.ca/ontario-compliance-operating-system-/" target="_blank" rel="noopener">Compliance</a></li>
+        <li><a href="https://naturalalternatives.ca" target="_blank" rel="noopener">Software</a></li>
+        <li><a href="https://landscape.naturalalternatives.ca" target="_blank" rel="noopener">Landscape</a></li>
+        <li><a href="https://firewood.naturalalternatives.ca" target="_blank" rel="noopener">Firewood</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <p class="footer-disclaimer"><a href="tel:+16133633503" style="color:var(--text);">613&#8209;363&#8209;3503</a><br><a href="mailto:info@naturalalternatives.ca" style="color:var(--text);">info@naturalalternatives.ca</a></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; 2026 Natural Alternatives. All rights reserved.</span>
+    <span>naturalalternatives.ca</span>
+  </div>
+</footer>
 
-<script>
-  // Year
-  document.getElementById('y').textContent = new Date().getFullYear();
-
-  // Helper to safely navigate (prevents partial/relative path issues)
-  function go(url){
-    window.location.href = url;
-  }
-
-  // Bind every compliance link to the exact same canonical URL
-  const pricingUrl = COMPLIANCE_URL + "#pricing";
-
-  const bind = (id, url) => {
-    const el = document.getElementById(id);
-    if(!el) return;
-    el.setAttribute("href", url);
-    el.addEventListener("click", (e) => {
-      // ensure it always navigates even if something overrides clicks
-      e.preventDefault();
-      go(url);
-    });
-  };
-
-  bind("navCompliance", COMPLIANCE_URL);
-  bind("heroCompliance", COMPLIANCE_URL);
-  bind("midCompliance", COMPLIANCE_URL);
-  bind("bottomCompliance", COMPLIANCE_URL);
-  bind("footerCompliance", COMPLIANCE_URL);
-  bind("floatCompliance", COMPLIANCE_URL);
-
-  bind("heroCompliancePricing", pricingUrl);
-  bind("floatPricing", pricingUrl);
-</script>
+<script src="script.js"></script>
 </body>
 </html>
