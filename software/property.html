@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NAC Property — NAC OS | Natural Alternatives</title>
-<meta name="description" content="NAC Property is the property management module in NAC OS — work orders, tenant portal, QR job tracking, and compliance records for managers who work on site.">
+<meta name="description" content="NAC Property is the property management module in NAC OS — buildings, units and appliances, QR labels your crew scans to clock in, checklists, work orders and a time-stamped visit log. Request a private demo.">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
     <symbol id="i-building" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></symbol>
     <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 005.4-5.4l-2.5 2.5-2-2z"/></symbol>
     <symbol id="i-qr" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 14h2M14 19h2M19 19h2"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.6-3 7.9-7 9-4-1.1-7-4.4-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
   </defs>
 </svg>
 
@@ -37,7 +37,7 @@
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
         <svg viewBox="0 0 24 24"><use href="#n-grid"/></svg>
       </button>
-      <a class="btn btn-primary" href="https://naturalalternatives.ca/nac/property/demo" target="_blank" rel="noopener">Get Instant Demo Access</a>
+      <a class="btn btn-primary" href="#request-demo">Request a Demo</a>
     </div>
   </div>
 </header>
@@ -47,29 +47,29 @@
 <section id="hero">
   <div class="container hero-inner">
     <div class="hero-copy">
-      <span class="eyebrow">NAC OS &middot; Module 02 &middot; Preview</span>
+      <span class="eyebrow">NAC OS &middot; Module 02</span>
       <h1>Manage properties. Not paperwork.</h1>
-      <p class="lede">Work orders, tenant management, compliance tracking, and QR job scanning &mdash; built for property managers who work on site, not behind a desk.</p>
+      <p class="lede">Buildings, units and appliances in one workspace &mdash; with QR labels your crew scans on site to clock in, work a checklist, and report problems the moment they find them.</p>
       <div class="hero-ctas">
-        <a href="https://naturalalternatives.ca/nac/property/demo" target="_blank" rel="noopener" class="btn btn-primary">Get Instant Demo Access <svg class="icon btn-arrow" style="width:14px;height:14px;"><use href="#n-arrow"/></svg></a>
+        <a href="#request-demo" class="btn btn-primary">Request a Demo <svg class="icon btn-arrow" style="width:14px;height:14px;"><use href="#n-arrow"/></svg></a>
         <a href="index.html" class="btn btn-outline">All Modules</a>
       </div>
       <div class="hero-meta">
-        <div><b>Instant</b>Demo access by email</div>
-        <div><b>14 Days</b>Demo code validity</div>
-        <div><b>Preview</b>Pre&#8209;launch module</div>
+        <div><b>Private</b>Your own workspace &amp; data</div>
+        <div><b>QR&#8209;Based</b>Crew scan &amp; clock&#8209;in</div>
+        <div><b>Time&#8209;Limited</b>Demo link, no install</div>
       </div>
     </div>
 
     <div class="status-card" aria-hidden="true">
       <div class="status-bar">
         <span class="status-dot"></span><span class="status-dot"></span><span class="status-dot"></span>
-        <span class="status-title">NAC Property &middot; Preview</span>
+        <span class="status-title">NAC Property &middot; Demo workspace</span>
       </div>
       <div class="status-body">
-        <div class="status-row"><span class="status-row-label"><svg><use href="#i-building"/></svg>Property Registry</span><span class="chip chip-ok">Active</span></div>
-        <div class="status-row"><span class="status-row-label"><svg><use href="#i-wrench"/></svg>Work Orders</span><span class="chip chip-ok">Tracked</span></div>
-        <div class="status-row"><span class="status-row-label"><svg><use href="#i-qr"/></svg>QR Job Scan</span><span class="chip chip-neutral">Arrival/Departure</span></div>
+        <div class="status-row"><span class="status-row-label"><svg><use href="#i-building"/></svg>Property Registry</span><span class="chip chip-ok">Your data</span></div>
+        <div class="status-row"><span class="status-row-label"><svg><use href="#i-qr"/></svg>QR Labels</span><span class="chip chip-ok">Printable</span></div>
+        <div class="status-row"><span class="status-row-label"><svg><use href="#i-clock"/></svg>Crew Clock&#8209;In</span><span class="chip chip-neutral">Time&#8209;stamped</span></div>
       </div>
     </div>
   </div>
@@ -79,42 +79,55 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">What's Inside</span>
-      <h2>Six Tools, One Workflow</h2>
-      <p>The entire property workflow, from one phone or one desk.</p>
+      <h2>From Label to Logged Visit</h2>
+      <p>A worker scans the unit, then the appliance, and everything lands in your records.</p>
     </div>
     <div class="service-grid">
       <article class="service-card">
         <svg class="icon"><use href="#i-building"/></svg>
         <h4>Property Registry</h4>
-        <p>Buildings, units, appliances, photos, and documents &mdash; every asset in one searchable database.</p>
+        <p>Buildings, units, appliances, documents and history &mdash; every asset in one searchable place.</p>
+      </article>
+      <article class="service-card">
+        <svg class="icon"><use href="#i-qr"/></svg>
+        <h4>QR Labels</h4>
+        <p>Print a label for every unit and appliance, ready to laminate or mount on plastic board.</p>
       </article>
       <article class="service-card">
         <svg class="icon"><use href="#i-wrench"/></svg>
         <h4>Work Orders</h4>
-        <p>Create, assign, and track maintenance with a full audit trail on every job.</p>
+        <p>A problem flagged on site becomes a work order, and finished tasks close it out automatically.</p>
       </article>
       <article class="service-card">
-        <svg class="icon"><use href="#i-qr"/></svg>
-        <h4>QR Job Tracking</h4>
-        <p>Crews scan on arrival and departure &mdash; every job logged and time&#8209;stamped.</p>
-      </article>
-      <article class="service-card">
-        <svg class="icon"><use href="#i-shield"/></svg>
-        <h4>Compliance Records</h4>
-        <p>Fire, HVAC, and electrical certs tracked with auto&#8209;reminders before anything lapses.</p>
+        <svg class="icon"><use href="#i-clock"/></svg>
+        <h4>Visit Log</h4>
+        <p>Every visit time-stamped with checklist results, photos and voice notes &mdash; exportable to CSV.</p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="pad quote-band">
-  <div class="container quote-inner">
-    <span class="eyebrow">Try It Now</span>
-    <h2>Get a demo code in seconds.</h2>
-    <p>Drop your email and we'll generate a unique demo code instantly &mdash; no sales call required to look around.</p>
-    <div class="quote-ctas">
-      <a href="https://naturalalternatives.ca/nac/property/demo" target="_blank" rel="noopener" class="btn btn-primary">Get Instant Demo Access <svg class="icon btn-arrow" style="width:14px;height:14px;"><use href="#n-arrow"/></svg></a>
-      <a href="index.html" class="btn btn-outline">All Modules</a>
+<section class="pad quote-band" id="request-demo">
+  <div class="container" style="max-width:560px;">
+    <div style="text-align:center;margin-bottom:28px;">
+      <span class="eyebrow">Private Demo</span>
+      <h2 style="margin-top:14px;">See it with your own properties.</h2>
+      <p style="color:var(--text-soft);font-size:16.5px;">Tell us who you are and we'll email you a private demo workspace &mdash; your own data, your own link, nothing to install.</p>
+    </div>
+    <form id="demoForm" novalidate>
+      <div class="field-row">
+        <div class="field"><label for="dName">Name</label><input type="text" id="dName" required autocomplete="name"></div>
+        <div class="field"><label for="dEmail">Email</label><input type="email" id="dEmail" required autocomplete="email"></div>
+      </div>
+      <div class="field"><label for="dCompany">Company</label><input type="text" id="dCompany" autocomplete="organization"></div>
+      <input type="text" id="dWebsite" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="form-error" id="dError"></div>
+      <button type="submit" class="btn btn-primary" id="dSubmit" style="width:100%;justify-content:center;">Request a Demo</button>
+    </form>
+    <div class="success-state" id="dSuccess">
+      <div class="success-icon"><svg viewBox="0 0 24 24"><use href="#n-check"/></svg></div>
+      <h4>Request received</h4>
+      <p>Thanks &mdash; we'll review your request and email you a private demo link. Check your inbox for a confirmation.</p>
     </div>
   </div>
 </section>
@@ -148,5 +161,45 @@
 </footer>
 
 <script src="../script.js"></script>
+<script>
+(function(){
+  var form = document.getElementById('demoForm');
+  var errEl = document.getElementById('dError');
+  var submitBtn = document.getElementById('dSubmit');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errEl.classList.remove('show');
+    var name = document.getElementById('dName').value.trim();
+    var email = document.getElementById('dEmail').value.trim();
+    var company = document.getElementById('dCompany').value.trim();
+    var website = document.getElementById('dWebsite').value.trim();
+    if (!name) { errEl.textContent = 'Please enter your name'; errEl.classList.add('show'); return; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { errEl.textContent = 'Please enter a valid email'; errEl.classList.add('show'); return; }
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    fetch('https://property.naturalalternatives.ca/api/request-demo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, email: email, company: company, website: website })
+    }).then(function(r){ return r.json().then(function(d){ return { ok: r.ok, d: d }; }); })
+      .then(function(res){
+        if (!res.ok || !res.d.success) {
+          errEl.textContent = res.d.error || 'Something went wrong — please try again or email info@naturalalternatives.ca';
+          errEl.classList.add('show');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Request a Demo';
+          return;
+        }
+        form.style.display = 'none';
+        document.getElementById('dSuccess').classList.add('show');
+      }).catch(function(){
+        errEl.textContent = 'Connection error — please try again or email info@naturalalternatives.ca';
+        errEl.classList.add('show');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Request a Demo';
+      });
+  });
+})();
+</script>
 </body>
 </html>
